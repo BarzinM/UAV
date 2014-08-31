@@ -19,6 +19,9 @@ classdef UAV
             % Class constructor
         end % UAV class constructor
         
+end
+end
+
         function rates=HexacopterModel(obj,inputs)
             %% Hexacopter system modelling
             %
