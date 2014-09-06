@@ -12,6 +12,7 @@ Hexacopter Project
 1. [ ] Decide on test inputs
 	1. [ ] Force
 	1. [ ] Torque
+1. [ ] Stability analysis
 1. [ ] Path development
 1. [ ] Sensor
 	1. [ ] Modeling
