@@ -1,5 +1,5 @@
 classdef UAV
-
+    
     properties
         mass=1;
         momentum=ones(3,1);
@@ -19,10 +19,7 @@ classdef UAV
             % Class constructor
         end % UAV class constructor
         
-end
-end
-
-        function rates=HexacopterModel(obj,inputs)
+        function rates=hexacopterModel(obj,inputs)
             %% Hexacopter system modelling
             %
             %   states: [u v w p q r]' where u, v, w are linear velocities and p, q,
@@ -31,7 +28,7 @@ end
             %   inputs: [force torque]'
             %
             %
-
+            
             force=inputs(1:3);
             torque=inputs(4:end);
             %% Initialization
@@ -52,7 +49,7 @@ end
             rates(6)=(q*p*(obj.momentum(1)-obj.momentum(2))+torque(3))/obj.momentum(3);
         end % HexacopterModel
         
-        function forces=ForceCalculation()
+        function forces=forceCalculation()
             gg=9.8;
             
             gravity=obj.mass*gg*[sin(obj.pitch),cos(obj.pitch)*sin(obj.roll),...
@@ -68,12 +65,12 @@ end
             
         end % ForceCalculation
         
-        function torque=TorqueCalculation()
+        function torque=torqueCalculation()
             
             yaw_counter_torque=[0,0,obj.propeller_inertia*obj.propeller_speed_change_rate]';
             
             gyroscopic_effect=obj.propeller_inertia*obj.overall_propeller_speed*[]'; % ?????
-        
+            
         end % TorqueCalculation
     end % Methods
     
