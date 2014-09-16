@@ -106,6 +106,10 @@ classdef UAV
         end
         
         function showUAV(obj)
+            radius = 1;
+            degrees=pi*[0:60:360] / 180;
+            x_geometrics = radius * sin(degrees);
+            y_geometrics = radius * cos(degrees);
             axis_length=1;
             
             x = obj.position(1)
@@ -114,11 +118,23 @@ classdef UAV
             
             vector = rotation(obj) * [axis_length, 0, 0]';
             
-            u = axis_length * vector(1)
-            v = axis_length * vector(2)
-            w = axis_length * vector(3)
+            u = axis_length * vector(1) + x
+            v = axis_length * vector(2) + y
+            w = axis_length * vector(3) + z
             
-            quiver3(x, y, z, u, v, w);
+            body = rotation(obj) * [x_geometrics; y_geometrics; zeros(size(x_geometrics))];
+            size(body)
+            
+            body(1,:) = body(1,:) + x;
+            body(2,:) = body(2,:) + y;
+            body(3,:) = body(3,:) + z;
+            body
+            
+            
+            plot3(body(1,:), body(2,:), body(3,:),'--','LineWidth',3,'MarkerSize',20)
+            hold on
+            plot3([body(1,6),body(1,1)], [body(2,6),body(2,1)], [body(3,6),body(3,1)],'r*','LineWidth',3,'MarkerSize',10)
+            
         end % showHexa function
     end % Methods
     
