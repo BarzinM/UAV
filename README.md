@@ -23,5 +23,7 @@ Hexacopter Project
 ## Developed
 
 
+## Resources
 
+- [IMU/GPS multi-sensor fusion](http://www.stats.ox.ac.uk/~caron/Publications/J_Information_Fusion_2004.pdf)
 

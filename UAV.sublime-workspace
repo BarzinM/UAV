@@ -1,0 +1,379 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"keypoints2"
+			],
+			[
+				"run",
+				"run_code_fast"
+			],
+			[
+				"elap",
+				"elapsed_secs"
+			],
+			[
+				"fea",
+				"featured_image"
+			],
+			[
+				"keyoi",
+				"keypoint"
+			],
+			[
+				"ori",
+				"original_frame"
+			],
+			[
+				"frame",
+				"frame_pointer"
+			],
+			[
+				"orig",
+				"original_frame1"
+			],
+			[
+				"origian",
+				"original_frame"
+			],
+			[
+				"sample",
+				"sample"
+			],
+			[
+				"resi",
+				"resized"
+			],
+			[
+				"marker",
+				"marker_size"
+			],
+			[
+				"markee",
+				"marker_line_width"
+			],
+			[
+				"X",
+				"x_sample"
+			],
+			[
+				"J",
+				"J_history"
+			],
+			[
+				"max",
+				"max_mult"
+			],
+			[
+				"dia",
+				"diagonal-45"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 576,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++.sublime-build",
+	"command_palette":
+	{
+		"height": 49.0,
+		"selected_items":
+		[
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 649.0
+	},
+	"console":
+	{
+		"height": 192.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/brzn/MyProjects/UAV/README.md",
+		"/home/brzn/MyProjects/UAV/UAV.m",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/normalEqn.m",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/computeCostMulti.m",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/LinearRegression.md",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/gradientDescentMulti.m",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/featureNormalize.m",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/ex1_multi.m",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/ex1data2.txt",
+		"/home/brzn/MyGithub/MachineLearning/Linear_Regression/mlclass-ex1/ex1data2",
+		"/home/brzn/MyGithub/Blog/Intro.html",
+		"/home/brzn/.tuxguitar-1.2/config.properties",
+		"/home/brzn/MyGithub/MachineLearning/Neural_Networks_Learning/mlclass-ex4/ex4.m",
+		"/home/brzn/MyGithub/MachineLearning/Neural_Networks_Learning/mlclass-ex4/nnCostFunction.m",
+		"/home/brzn/MyGithub/MachineLearning/Neural_Networks_Learning/mlclass-ex4/sigmoid.m",
+		"/home/brzn/MyGithub/ImageProcessing/testheader_H.h",
+		"/home/brzn/MyGithub/ImageProcessing/frontEnd.cpp",
+		"/home/brzn/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/brzn/MyGithub/UAV/HexacopterModel.m",
+		"/home/brzn/MyGithub/UAV/UAV.m",
+		"/home/brzn/MyGithub/UAV/frontend.m",
+		"/home/brzn/MyGithub/UAV/test.m",
+		"/home/brzn/MyGithub/UAV/HexacopterObject.m",
+		"/home/brzn/MyGithub/ImageProcessing/README.md",
+		"/home/brzn/MyGithub/ImageProcessing/ImageProcessingProjectReadMe.txt",
+		"/home/brzn/MyGithub/ImageProcessing/PrototypeAlgorithm.cpp",
+		"/home/brzn/MyGithub/ImageProcessing/DisplayImage.cpp",
+		"/home/brzn/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/brzn/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/home/brzn/.config/sublime-text-3/Packages/User/MarkdownPreview.sublime-settings",
+		"/home/brzn/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/home/brzn/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/ex2_reg.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/costFunctionReg.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/mapFeature.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/plotData.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/costFunction.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/ex2.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/predict.m",
+		"/home/brzn/MyGithub/MachineLearning/Logistic_Regression/mlclass-ex2/sigmoid.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/computeCostMulti.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/gradientDescentMulti.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/normalEqn.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/ex1_multi.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/featureNormalize.m",
+		"/home/brzn/MyGithubProjects/MachineLearning/Problem1/mlclass-ex1/plotData.m",
+		"/home/brzn/MyGithubProjects/MachineLearning/Problem1/mlclass-ex1/computeCost.m",
+		"/home/brzn/MyGithub/AndroidDevelopment/HelloWorld.java",
+		"/home/brzn/test.cpp",
+		"/home/brzn/MyGithubProjects/MachineLearning/Problem1/mlclass-ex1/ex1.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/gradientDescent.m",
+		"/home/brzn/MyGithub/MachineLearning/Problem1/mlclass-ex1/ex1.m",
+		"/home/brzn/MyGithubProjects/MachineLearning/Problem1/mlclass-ex1/ex1data",
+		"/home/brzn/MyGithubProjects/MachineLearning/Problem1/mlclass-ex1/warmUpExercise.m",
+		"/home/brzn/MyGithubProjects/MachineLearning/test.m",
+		"/tmp/test.cpp"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"price",
+			"out",
+			"resized",
+			"keypoints",
+			"resized",
+			"out",
+			"myfile",
+			"output",
+			"run_code_fast",
+			"frame_with_features",
+			"resized",
+			"out",
+			"resized_frame",
+			"original_frame1",
+			"original_frame",
+			"temp",
+			"original_frame",
+			"origianl_frame",
+			"frame_with_features",
+			"resized_frame",
+			"original_frame",
+			"reindent",
+			"sample2",
+			"sample"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								496,
+								496
+							]
+						],
+						"settings":
+						{
+							"parser": "markdown",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"target": "browser"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 37.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 154.0
+	},
+	"project": "UAV.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/DefaultSublimeProject.sublime-project"
+			],
+			[
+				"replical",
+				"~/MyGithub/Replica/Replica.sublime-project"
+			]
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}
