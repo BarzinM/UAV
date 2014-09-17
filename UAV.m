@@ -3,15 +3,13 @@ classdef UAV
     properties
         mass=1;
         position = [-5, 0, 0]';
-        orientation = [0, 0, 0]';
+        orientation = [0, .1, 0]';
         
         momentum=ones(3,1);
-        states=[0 0 0 0 .1 0]';
-%         roll; % phi
-%         pitch; % theta
-%         yaw;
+        states=[0 0 0 0 0 0]';
+
         trust_constant=1;
-        CrossSectionArea=[40 40 10000]'/10000;
+        cross_section_area=[40 40 10000]'/10000;
         C=1;
         
         
@@ -39,6 +37,7 @@ classdef UAV
             
             rates=zeros(size(obj.states));
             
+            inputs=forceCalculation(obj,inputs);
             
             [u,v,w,p,q,r]=deal(obj.states(1),obj.states(2),obj.states(3),...
                 obj.states(4),obj.states(5),obj.states(6));
@@ -52,36 +51,42 @@ classdef UAV
             rates(5)=(p*r*(obj.momentum(3)-obj.momentum(1))+Ty)/obj.momentum(2);
             rates(6)=(q*p*(obj.momentum(1)-obj.momentum(2))+Tz)/obj.momentum(3);
             
-            fprintf('+----------+----------+----------+\n')
-            fprintf('|FX:   %0.2f|FY:   %0.2f|FZ:   %0.2f|\n',Fx,Fy,Fz); 
-            fprintf('+----------+----------+----------+\n')
-            fprintf('|AccX: %0.2f|AccY: %0.2f|AccZ:%0.2f|\n',rates(1),rates(2),rates(3));
-            fprintf('+----------+----------+----------+\n')
-            fprintf('|TX:   %0.2f|TY:   %0.2f|TZ:   %0.2f|\n',Tx,Ty,Tz); 
-            fprintf('+----------+----------+----------+\n')
-            fprintf('|AngX: %0.2f|AngY: %0.2f|AngZ: %0.2f|\n',rates(4),rates(5),rates(6));
-            fprintf('+----------+----------+----------+\n')
-            fprintf('|VelX: %0.2f|VelY: %0.2f|VelZ:%0.2f|\n',obj.states(1),obj.states(2),obj.states(3)); 
-            fprintf('+----------+----------+----------+\n')
-            fprintf('|OriX: %0.2f|OriY: %0.2f|OriZ: %0.2f|\n',obj.states(4), obj.states(5), obj.states(6));
-            fprintf('+----------+----------+----------+\n\n')
+            fprintf('+===========+===========+===========+\n')
+            fprintf('|FX:   %+0.2f|FY:   %+0.2f|FZ:   %+0.2f|\n',Fx,Fy,Fz); 
+            fprintf('+-----------+-----------+-----------+\n')
+            fprintf('|AccX: %+0.2f|AccY: %+0.2f|AccZ: %+0.2f|\n',rates(1),rates(2),rates(3));
+            fprintf('+-----------+-----------+-----------+\n')
+            fprintf('|TX:   %+0.2f|TY:   %+0.2f|TZ:   %+0.2f|\n',Tx,Ty,Tz); 
+            fprintf('+-----------+-----------+-----------+\n')
+            fprintf('|AngX: %+0.2f|AngY: %+0.2f|AngZ: %+0.2f|\n',rates(4),rates(5),rates(6));
+            fprintf('+-----------+-----------+-----------+\n')
+            fprintf('|VelX: %+0.2f|VelY: %+0.2f|VelZ: %+0.2f|\n',obj.states(1),obj.states(2),obj.states(3)); 
+            fprintf('+-----------+-----------+-----------+\n')
+            fprintf('|OriX: %+0.2f|OriY: %+0.2f|OriZ: %+0.2f|\n',obj.states(4), obj.states(5), obj.states(6));
+            fprintf('+-----------+-----------+-----------+\n\n')
 
             
         end % HexacopterModel
         %%
-        function forces=forceCalculation()
-            gg=9.8;
+        function forces=forceCalculation(obj,inputs)
+            gg = 9.8;
+            mu =0;
+            friction=.5;
+            air_rho=1.225;
             
-            gravity=obj.mass*gg*[sin(obj.pitch),cos(obj.pitch)*sin(obj.roll),...
-                cos(obj.pitch)*cos(obj.roll)]';
+            gravity=obj.mass*gg*[sin(obj.orientation(2)),...
+                -cos(obj.orientation(2))*sin(obj.orientation(1)),...
+                -cos(obj.orientation(2))*cos(obj.orientation(1))]';
             
-            thrust_vector=[0,0,trust_value]';
+            thrust_vector=[0,0,inputs(3)]';
             
-            rotor_drag=-obj.mu*[obj.state(1),obj.state(2),0]';
+            rotor_drag=-mu*[obj.states(1),obj.states(2),0]';
             
-            air_resistance=-[obj.cross_section_area.*obj.states(1:3).*abs(obj.states(1:3))]'*obj.C/2;
+            air_resistance=-[obj.cross_section_area.*obj.states(1:3).*abs(obj.states(1:3))].*air_rho*friction/2;
             
             forces=gravity+thrust_vector+rotor_drag+air_resistance;
+            
+            forces=[forces;inputs(4:end)];
             
         end % ForceCalculation
         %%
@@ -149,6 +154,10 @@ classdef UAV
             plot3([body(1,end),body(1,1)], [body(2,end),body(2,1)], [body(3,end),body(3,1)],'--r*','LineWidth',3,'MarkerSize',10)
             
         end % showHexa function
+        
+        function history(obj)
+            
+        end % history
     end % Methods
     
 end
