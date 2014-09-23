@@ -1,9 +1,9 @@
 clear all
 close all
 
-steps=70;
+steps=20;
 
-inputs=[0 0 9.8 0 0 0]';
+inputs=[0 0 9.8 0 0 .03]';
 hexa=UAV();
 hexa = setOrientation(hexa, [0, .1, 0]);
 timestep=1;
@@ -20,7 +20,7 @@ rotation(:,1)=getAngularRate(hexa);
 for i = 1:steps
     clc
     fprintf('In time step %0.f:\n',i);
-    
+    if(i==10)input(6)=0;end
     hexa = simulateExtendedUAV(hexa, inputs, timestep);
     showExtendedUAV(hexa);
     daspect([1,1,1]);
@@ -30,7 +30,7 @@ for i = 1:steps
     velocity(:,i+1)=getVelocity(hexa);
     rotation(:,i+1)=getAngularRate(hexa);
 
-    %pause(.05);
+    pause(.2);
 end
 
 horizontal=0:steps;

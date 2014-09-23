@@ -172,6 +172,11 @@ classdef UAV
         
         
         %%
+        function []=linearModel(obj)
+            matrixA=[0 0 0 0 
+        end
+        
+        %%
         function forces=forceCalculation(obj,inputs)
             gg = 9.8;
             mu =0;
